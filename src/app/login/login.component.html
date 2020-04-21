@@ -1,0 +1,13 @@
+<form *ngIf=!loginval (submit)="LoginApplication(LoginForm)" #LoginForm="ngForm" >
+    <div>
+    Username
+    <input type="text" name="UserName" ngModel #username="ngModel" >
+    <br>
+    Password
+    <input type="password" name="Password" ngModel #password="ngModel">
+    <br>
+    <label class="errmsg">{{error}}</label>
+    <input type="submit" value="Login">
+</div>
+</form>
+<app-homepage *ngIf="loginval"></app-homepage>
